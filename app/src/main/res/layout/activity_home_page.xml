@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <ImageView
+        android:id="@+id/duckTitle"
+        android:layout_width="412dp"
+        android:layout_height="232dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ducktitle_foreground" />
+
+    <Button
+        android:id="@+id/odu"
+        android:layout_width="144dp"
+        android:layout_height="113dp"
+        android:text="OUR DYNAMIC UNIVERSE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/paw"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/duckTitle"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <Button
+        android:id="@+id/paw"
+        android:layout_width="144dp"
+        android:layout_height="113dp"
+        android:text="Particle and Waves"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/odu"
+        app:layout_constraintTop_toBottomOf="@+id/duckTitle"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <Button
+        android:id="@+id/elec"
+        android:layout_width="144dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="184dp"
+        android:text="Electricity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/duckTitle" />
+
+    <Button
+        android:id="@+id/test"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="General Quiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elec" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
