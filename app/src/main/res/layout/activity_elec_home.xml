@@ -6,4 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".Electricity.ElecHome">
 
+    <TextView
+        android:id="@+id/elecHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Electricity"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/acButton"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:text="AC: Measurement"
+        app:layout_constraintBottom_toBottomOf="@+id/currentButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/currentButton" />
+
+    <Button
+        android:id="@+id/currentButton"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:text="Current, Voltage, Power, Resistance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elecHeading" />
+
+    <Button
+        android:id="@+id/sourcesButton"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:text="Sources and Internal Resistance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/capButton" />
+
+    <Button
+        android:id="@+id/capButton"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:text="Capacitors"
+        app:layout_constraintBottom_toBottomOf="@+id/semiButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/semiButton" />
+
+    <Button
+        android:id="@+id/semiButton"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:text="Semi Conductors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/currentButton"
+        app:layout_constraintTop_toBottomOf="@+id/currentButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

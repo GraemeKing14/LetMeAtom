@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Button LogIn;
     private TextView newUser;
     private DatabaseHelper db;
+    private String user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 Boolean res = db.checkUser(user, pwd);
                 if (res) {
                     startActivity(new Intent(MainActivity.this, HomePage.class));
+                    Toast.makeText(MainActivity.this, "Welcome " + user, Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(MainActivity.this, "Incorrect Username or Password", Toast.LENGTH_SHORT).show();
                 }
