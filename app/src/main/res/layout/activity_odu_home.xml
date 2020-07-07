@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OurDynamicUniverse.oduHome">
+
+    <TextView
+        android:id="@+id/oudHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="Our Dynamic Universe"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/motionButton"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:text="Motion: Equations &amp; Graphs"
+        app:layout_constraintBottom_toBottomOf="@+id/forcesButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/forcesButton" />
+
+    <Button
+        android:id="@+id/forcesButton"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:text="Forces, Energy &amp; Power"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oudHeading" />
+
+    <Button
+        android:id="@+id/colButton"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:text="Collisions, Explosions &amp; Impulse"
+        app:layout_constraintBottom_toBottomOf="@+id/gravButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gravButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/gravButton"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:text="Gravitation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/forcesButton"
+        app:layout_constraintTop_toBottomOf="@+id/forcesButton" />
+
+    <Button
+        android:id="@+id/relButton"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="64dp"
+        android:text="Special Relativity"
+        app:layout_constraintBottom_toBottomOf="@+id/uniButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/uniButton"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/uniButton"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:text="The Expanding Universe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gravButton" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
