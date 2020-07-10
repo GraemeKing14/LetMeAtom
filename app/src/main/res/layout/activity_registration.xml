@@ -16,7 +16,7 @@
         android:hint="Enter Username"
         android:inputType="textPersonName"
         android:textColor="?attr/textcolor"
-        android:textColorHint="?attr/textcolor"
+        android:textColorHint="?attr/hintcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +30,7 @@
         android:hint="Enter Password"
         android:inputType="textPassword"
         android:textColor="?attr/textcolor"
-        android:textColorHint="?attr/textcolor"
+        android:textColorHint="?attr/hintcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enterNameReg" />

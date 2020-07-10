@@ -1,13 +1,17 @@
 package com.example.layout_idea;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
+import android.media.Image;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.Switch;
 
 import com.example.layout_idea.Electricity.ElecHome;
@@ -23,6 +27,7 @@ public class HomePage extends AppCompatActivity {
     private Button Quiz;
     SharedPrefs sharedPref;
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         sharedPref = new SharedPrefs(this);

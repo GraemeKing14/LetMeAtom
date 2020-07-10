@@ -8,6 +8,7 @@
         <item name="backgroundcolor">#ffffff</item>
         <item name="buttoncolor">#00C4FF</item>
         <item name="textcolor">#000000</item>
+        <item name="hintcolor">#505050</item>
 
     </style>
 
@@ -21,6 +22,7 @@
         <item name="backgroundcolor">#232323</item>
         <item name="buttoncolor">#FF4949</item>
         <item name="textcolor">#FFFFFF</item>
+        <item name="hintcolor">#AFAFAF</item>
 
     </style>
 
