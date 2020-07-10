@@ -14,9 +14,17 @@ public class Registration extends AppCompatActivity {
     private EditText username, password;
     private Button register;
     private DatabaseHelper db;
+    SharedPrefs sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        sharedPref = new SharedPrefs(this);
+        if(sharedPref.loadNightMode()==true) {
+            setTheme(R.style.DarkTheme);
+        }
+        else {
+            setTheme(R.style.AppTheme);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         setUpUi();

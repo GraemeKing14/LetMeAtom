@@ -1,11 +1,14 @@
 package com.example.layout_idea;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 import com.example.layout_idea.Electricity.ElecHome;
 import com.example.layout_idea.Examination.examDifficulty;
@@ -18,9 +21,17 @@ public class HomePage extends AppCompatActivity {
     private Button PAW;
     private Button Elec;
     private Button Quiz;
+    SharedPrefs sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        sharedPref = new SharedPrefs(this);
+        if(sharedPref.loadNightMode()==true) {
+            setTheme(R.style.DarkTheme);
+        }
+        else {
+            setTheme(R.style.AppTheme);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         setUpUi();
@@ -62,4 +73,5 @@ public class HomePage extends AppCompatActivity {
         Elec = findViewById(R.id.elec);
         Quiz = findViewById(R.id.test);
     }
+
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor"
     tools:context=".ParticlesAndWaves.pawHome">
 
     <TextView
@@ -13,7 +14,7 @@
         android:layout_marginTop="32dp"
         android:gravity="center_horizontal"
         android:text="Particles and Waves"
-        android:textColor="#000000"
+        android:textColor="?attr/textcolor"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +27,9 @@
         android:layout_marginStart="60dp"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="32dp"
+        android:background="?attr/buttoncolor"
         android:text="Forces on Charged Particles"
+        android:textColor="?attr/textcolor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pawHeading" />
 
@@ -36,7 +39,9 @@
         android:layout_height="120dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
+        android:background="?attr/buttoncolor"
         android:text="The Standard Model"
+        android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="@+id/chargeButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/chargeButton"
@@ -48,7 +53,9 @@
         android:layout_height="120dp"
         android:layout_marginStart="60dp"
         android:layout_marginLeft="60dp"
+        android:background="?attr/buttoncolor"
         android:text="Nuclear Reactions"
+        android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="@+id/invButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/invButton" />
@@ -60,7 +67,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
+        android:background="?attr/buttoncolor"
         android:text="Inverse Square Law"
+        android:textColor="?attr/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/smButton" />
 
@@ -70,7 +79,9 @@
         android:layout_height="120dp"
         android:layout_marginStart="60dp"
         android:layout_marginLeft="60dp"
+        android:background="?attr/buttoncolor"
         android:text="Wave-Particle Duality"
+        android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="@+id/intButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/intButton" />
@@ -82,7 +93,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
+        android:background="?attr/buttoncolor"
         android:text="Interference "
+        android:textColor="?attr/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/invButton" />
 
@@ -92,7 +105,9 @@
         android:layout_height="120dp"
         android:layout_marginStart="60dp"
         android:layout_marginLeft="60dp"
+        android:background="?attr/buttoncolor"
         android:text="Spectra"
+        android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="@+id/refButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/refButton" />
@@ -104,7 +119,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
+        android:background="?attr/buttoncolor"
         android:text="Refraction of Light"
+        android:textColor="?attr/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/intButton" />
 
