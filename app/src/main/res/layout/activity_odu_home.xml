@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor"
     tools:context=".OurDynamicUniverse.oduHome">
 
     <TextView
@@ -13,7 +14,7 @@
         android:layout_marginTop="32dp"
         android:gravity="center_horizontal"
         android:text="Our Dynamic Universe"
-        android:textColor="#000000"
+        android:textColor="?attr/textcolor"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +26,9 @@
         android:layout_height="120dp"
         android:layout_marginStart="60dp"
         android:layout_marginLeft="60dp"
+        android:background="?attr/buttoncolor"
         android:text="Motion: Equations &amp; Graphs"
+        android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="@+id/forcesButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/forcesButton" />
@@ -37,7 +40,9 @@
         android:layout_marginTop="72dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
+        android:background="?attr/buttoncolor"
         android:text="Forces, Energy &amp; Power"
+        android:textColor="?attr/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/oudHeading" />
 
@@ -47,7 +52,9 @@
         android:layout_height="120dp"
         android:layout_marginStart="60dp"
         android:layout_marginLeft="60dp"
+        android:background="?attr/buttoncolor"
         android:text="Collisions, Explosions &amp; Impulse"
+        android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="@+id/gravButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gravButton"
@@ -58,7 +65,9 @@
         android:layout_width="130dp"
         android:layout_height="120dp"
         android:layout_marginTop="32dp"
+        android:background="?attr/buttoncolor"
         android:text="Gravitation"
+        android:textColor="?attr/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/forcesButton"
@@ -71,7 +80,9 @@
         android:layout_marginStart="60dp"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="64dp"
+        android:background="?attr/buttoncolor"
         android:text="Special Relativity"
+        android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="@+id/uniButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/uniButton"
@@ -84,11 +95,11 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="56dp"
         android:layout_marginRight="56dp"
+        android:background="?attr/buttoncolor"
         android:text="The Expanding Universe"
+        android:textColor="?attr/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gravButton" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

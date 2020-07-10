@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor"
     tools:context=".Examination.examDifficulty">
 
     <Button
@@ -11,7 +12,9 @@
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
+        android:background="?attr/buttoncolor"
         android:text="Easy"
+        android:textColor="?attr/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,7 +23,9 @@
         android:id="@+id/mediumButton"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
+        android:background="?attr/buttoncolor"
         android:text="Medium"
+        android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toTopOf="@+id/hardButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -32,7 +37,9 @@
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="200dp"
+        android:background="?attr/buttoncolor"
         android:text="Hard"
+        android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
