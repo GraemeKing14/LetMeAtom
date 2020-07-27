@@ -6,15 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
 
-public class oduHome extends AppCompatActivity {
+public class ForcesEnergyPower extends AppCompatActivity {
 
     SharedPrefs sharedPref;
+    private ImageButton backToMenu;
     private Button motion;
-    private Button forces;
     private Button collisions;
     private Button gravitation;
     private Button relativity;
@@ -30,51 +31,52 @@ public class oduHome extends AppCompatActivity {
             setTheme(R.style.AppTheme);
         }
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_odu_home);
+        setContentView(R.layout.activity_forces_energy_power);
         setUpUi();
     }
 
     public void setUpUi() {
-        motion = findViewById(R.id.motionButton);
-        forces = findViewById(R.id.forcesButton);
-        collisions = findViewById(R.id.colButton);
-        gravitation = findViewById(R.id.gravButton);
-        relativity = findViewById(R.id.relButton);
-        universe = findViewById(R.id.uniButton);
+        backToMenu = findViewById(R.id.returntoMenu);
+        motion = findViewById(R.id.toMotion);
+        collisions = findViewById(R.id.toCollisons);
+        gravitation = findViewById(R.id.toGravitation);
+        relativity = findViewById(R.id.toRelativity);
+        universe = findViewById(R.id.toUniverse);
+
+        backToMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ForcesEnergyPower.this, oduHome.class));
+            }
+        });
         motion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(oduHome.this, Motion.class));
-            }
-        });
-        forces.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(oduHome.this, ForcesEnergyPower.class));
+                startActivity(new Intent (ForcesEnergyPower.this, Motion.class));
             }
         });
         collisions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(oduHome.this, CollisionsExplosionsImpulse.class));
+                startActivity(new Intent(ForcesEnergyPower.this, CollisionsExplosionsImpulse.class));
             }
         });
         gravitation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(oduHome.this, Gravitation.class));
+                startActivity(new Intent(ForcesEnergyPower.this, Gravitation.class));
             }
         });
         relativity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(oduHome.this, SpecialRelativity.class));
+                startActivity(new Intent(ForcesEnergyPower.this, SpecialRelativity.class));
             }
         });
         universe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(oduHome.this, ExpandingUniverse.class));
+                startActivity(new Intent(ForcesEnergyPower.this, ExpandingUniverse.class));
             }
         });
     }
