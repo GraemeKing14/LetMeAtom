@@ -5,15 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/backgroundcolor"
-    tools:context=".OurDynamicUniverse.Motion">
+    tools:context=".OurDynamicUniverse.SpecialRelativity">
+
+    <ImageButton
+        android:id="@+id/returntoMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="?attr/buttoncolor"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
 
     <TextView
-        android:id="@+id/motionTitle"
+        android:id="@+id/relTitle"
         android:layout_width="258dp"
         android:layout_height="92dp"
         android:layout_marginTop="24dp"
         android:gravity="center_horizontal"
-        android:text="Motion: Equations and Graphs"
+        android:text="Special Relativity"
         android:textColor="?attr/textcolor"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,16 +33,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/toForces"
+        android:id="@+id/toMotion"
         android:layout_width="53dp"
         android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:background="?attr/buttoncolor"
+        android:text="1"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintBottom_toBottomOf="@+id/toForces"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toForces"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/toForces"
+        android:layout_width="53dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="?attr/buttoncolor"
         android:text="2"
         android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="@+id/toCollisons"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toCollisons"
+        app:layout_constraintStart_toEndOf="@+id/toMotion"
         app:layout_constraintTop_toTopOf="@+id/toCollisons"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -38,16 +67,12 @@
         android:id="@+id/toCollisons"
         android:layout_width="53dp"
         android:layout_height="55dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:background="?attr/buttoncolor"
         android:text="3"
         android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="@+id/toGravitation"
-        app:layout_constraintEnd_toStartOf="@+id/toGravitation"
-        app:layout_constraintStart_toEndOf="@+id/toForces"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toGravitation"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -55,29 +80,16 @@
         android:id="@+id/toGravitation"
         android:layout_width="53dp"
         android:layout_height="55dp"
-        android:background="?attr/buttoncolor"
-        android:text="4"
-        android:textColor="?attr/textcolor"
-        app:layout_constraintBottom_toBottomOf="@+id/toRelativity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toRelativity"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/toRelativity"
-        android:layout_width="53dp"
-        android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="?attr/buttoncolor"
-        android:text="5"
+        android:text="4"
         android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="@+id/toUniverse"
         app:layout_constraintEnd_toStartOf="@+id/toUniverse"
-        app:layout_constraintStart_toEndOf="@+id/toGravitation"
+        app:layout_constraintStart_toEndOf="@+id/toCollisons"
         app:layout_constraintTop_toTopOf="@+id/toUniverse"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -93,29 +105,5 @@
         android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageButton
-        android:id="@+id/returntoMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="?attr/buttoncolor"
-        android:textColor="?attr/textcolor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/motionTitle"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
-
-    <TextView
-        android:id="@+id/eqOfMotionTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Equations of Motion"
-        android:textColor="?attr/textcolor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/motionTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

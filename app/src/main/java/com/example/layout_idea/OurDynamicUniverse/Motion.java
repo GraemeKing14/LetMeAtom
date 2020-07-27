@@ -2,15 +2,82 @@ package com.example.layout_idea.OurDynamicUniverse;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.layout_idea.R;
+import com.example.layout_idea.SharedPrefs;
 
 public class Motion extends AppCompatActivity {
 
+    SharedPrefs sharedPref;
+    private ImageButton backToMenu;
+    private Button forces;
+    private Button collisions;
+    private Button gravitation;
+    private Button relativity;
+    private Button universe;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        sharedPref = new SharedPrefs(this);
+        if(sharedPref.loadNightMode()==true) {
+            setTheme(R.style.DarkTheme);
+        }
+        else {
+            setTheme(R.style.AppTheme);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_motion);
+        setUpUi();
+    }
+
+    public void setUpUi() {
+        backToMenu = findViewById(R.id.returntoMenu);
+        forces = findViewById(R.id.toForces);
+        collisions = findViewById(R.id.toCollisons);
+        gravitation = findViewById(R.id.toGravitation);
+        relativity = findViewById(R.id.toRelativity);
+        universe = findViewById(R.id.toUniverse);
+
+        backToMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent (Motion.this, oduHome.class));
+            }
+        });
+        forces.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent (Motion.this, ForcesEnergyPower.class));
+            }
+        });
+        collisions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Motion.this, CollisionsExplosionsImpulse.class));
+            }
+        });
+        gravitation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Motion.this, Gravitation.class));
+            }
+        });
+        relativity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Motion.this, SpecialRelativity.class));
+            }
+        });
+        universe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Motion.this, ExpandingUniverse.class));
+            }
+        });
     }
 }

@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OurDynamicUniverse.Motion"></activity>
+        <activity android:name=".OurDynamicUniverse.ExpandingUniverse"></activity>
+        <activity android:name=".OurDynamicUniverse.SpecialRelativity" />
+        <activity android:name=".OurDynamicUniverse.Gravitation" />
+        <activity android:name=".OurDynamicUniverse.CollisionsExplosionsImpulse" />
+        <activity android:name=".OurDynamicUniverse.ForcesEnergyPower" />
+        <activity android:name=".OurDynamicUniverse.Motion" />
         <activity android:name=".ParticlesAndWaves.pawHome" />
         <activity android:name=".OurDynamicUniverse.oduHome" />
         <activity android:name=".Examination.examDifficulty" />
