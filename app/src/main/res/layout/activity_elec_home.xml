@@ -84,4 +84,16 @@
         app:layout_constraintStart_toStartOf="@+id/currentButton"
         app:layout_constraintTop_toBottomOf="@+id/currentButton" />
 
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="?attr/textcolor"
+        android:background="?attr/buttoncolor"
+        android:text="return"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sourcesButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
