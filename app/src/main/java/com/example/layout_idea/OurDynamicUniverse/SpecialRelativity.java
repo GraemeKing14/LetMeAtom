@@ -58,19 +58,19 @@ public class SpecialRelativity extends AppCompatActivity {
         forces.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SpecialRelativity.this, CollisionsExplosionsImpulse.class));
+                startActivity(new Intent(SpecialRelativity.this, ForcesEnergyPower.class));
             }
         });
         collisions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SpecialRelativity.this, Gravitation.class));
+                startActivity(new Intent(SpecialRelativity.this, CollisionsExplosionsImpulse.class));
             }
         });
         gravitation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SpecialRelativity.this, SpecialRelativity.class));
+                startActivity(new Intent(SpecialRelativity.this, Gravitation.class));
             }
         });
         universe.setOnClickListener(new View.OnClickListener() {

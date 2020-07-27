@@ -58,25 +58,25 @@ public class ExpandingUniverse extends AppCompatActivity {
         forces.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ExpandingUniverse.this, CollisionsExplosionsImpulse.class));
+                startActivity(new Intent(ExpandingUniverse.this, ForcesEnergyPower.class));
             }
         });
         collisions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ExpandingUniverse.this, Gravitation.class));
+                startActivity(new Intent(ExpandingUniverse.this, CollisionsExplosionsImpulse.class));
             }
         });
         gravitation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ExpandingUniverse.this, SpecialRelativity.class));
+                startActivity(new Intent(ExpandingUniverse.this, Gravitation.class));
             }
         });
         relativity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ExpandingUniverse.this, ExpandingUniverse.class));
+                startActivity(new Intent(ExpandingUniverse.this, SpecialRelativity.class));
             }
         });
     }

@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import com.example.layout_idea.Electricity.ElecHome;
 import com.example.layout_idea.Examination.examDifficulty;
@@ -25,6 +26,7 @@ public class HomePage extends AppCompatActivity {
     private Button PAW;
     private Button Elec;
     private Button Quiz;
+    private Button LogOut;
     SharedPrefs sharedPref;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -40,6 +42,15 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         setUpUi();
+
+    }
+
+    public void setUpUi() {
+        ODU = findViewById(R.id.odu);
+        PAW = findViewById(R.id.paw);
+        Elec = findViewById(R.id.elec);
+        Quiz = findViewById(R.id.test);
+        LogOut = findViewById(R.id.logOut);
 
         Elec.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,15 +79,14 @@ public class HomePage extends AppCompatActivity {
                 startActivity(new Intent(HomePage.this, examDifficulty.class));
             }
         });
+        LogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePage.this, MainActivity.class));
+                Toast.makeText(HomePage.this, "You have successfully logged out!", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-
-    }
-
-    public void setUpUi() {
-        ODU = findViewById(R.id.odu);
-        PAW = findViewById(R.id.paw);
-        Elec = findViewById(R.id.elec);
-        Quiz = findViewById(R.id.test);
     }
 
 }

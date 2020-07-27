@@ -58,13 +58,13 @@ public class Gravitation extends AppCompatActivity {
         forces.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Gravitation.this, CollisionsExplosionsImpulse.class));
+                startActivity(new Intent(Gravitation.this, ForcesEnergyPower.class));
             }
         });
         collisions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Gravitation.this, Gravitation.class));
+                startActivity(new Intent(Gravitation.this, CollisionsExplosionsImpulse.class));
             }
         });
         relativity.setOnClickListener(new View.OnClickListener() {

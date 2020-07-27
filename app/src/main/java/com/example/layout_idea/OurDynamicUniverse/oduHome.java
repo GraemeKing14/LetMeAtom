@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.layout_idea.HomePage;
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
 
@@ -19,6 +20,7 @@ public class oduHome extends AppCompatActivity {
     private Button gravitation;
     private Button relativity;
     private Button universe;
+    private Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class oduHome extends AppCompatActivity {
         gravitation = findViewById(R.id.gravButton);
         relativity = findViewById(R.id.relButton);
         universe = findViewById(R.id.uniButton);
+        back = findViewById(R.id.backButton);
         motion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,6 +78,12 @@ public class oduHome extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(oduHome.this, ExpandingUniverse.class));
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(oduHome.this, HomePage.class));
             }
         });
     }
