@@ -7,4 +7,117 @@
     android:background="?attr/backgroundcolor"
     tools:context=".ParticlesAndWaves.Interference">
 
+    <TextView
+        android:id="@+id/intTitle"
+        android:layout_width="253dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:text="Interference"
+        android:textColor="?attr/textcolor"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/returntoMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="?attr/buttoncolor"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/intTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <Button
+        android:id="@+id/toFC"
+        android:layout_width="53dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/buttoncolor"
+        android:text="1"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/toSM"
+        android:layout_width="53dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/buttoncolor"
+        android:text="2"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toFC" />
+
+    <Button
+        android:id="@+id/toNR"
+        android:layout_width="53dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/buttoncolor"
+        android:text="3"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toInv"
+        app:layout_constraintStart_toEndOf="@+id/toSM" />
+
+    <Button
+        android:id="@+id/toInv"
+        android:layout_width="53dp"
+        android:layout_height="55dp"
+        android:background="?attr/buttoncolor"
+        android:textColor="?attr/textcolor"
+        android:layout_marginBottom="16dp"
+        android:text="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/toWPD"
+        android:layout_width="53dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/buttoncolor"
+        android:text="5"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toSpec"
+        app:layout_constraintStart_toEndOf="@+id/toInv" />
+
+    <Button
+        android:id="@+id/toSpec"
+        android:layout_width="53dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/buttoncolor"
+        android:text="7"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toRef" />
+
+    <Button
+        android:id="@+id/toRef"
+        android:layout_width="53dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/buttoncolor"
+        android:text="8"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

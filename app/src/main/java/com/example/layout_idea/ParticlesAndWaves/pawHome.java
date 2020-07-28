@@ -48,7 +48,7 @@ public class pawHome extends AppCompatActivity {
         interferenceButton = findViewById(R.id.intButton);
         spectraButton = findViewById(R.id.specButton);
         refractionButton = findViewById(R.id.refButton);
-        backButton = findViewById(R.id.chargeButton);
+        backButton = findViewById(R.id.backButton);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
