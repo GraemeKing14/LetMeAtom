@@ -7,4 +7,29 @@
     android:background="?attr/backgroundcolor"
     tools:context=".Electricity.Capacitors">
 
+    <TextView
+        android:id="@+id/capTitle"
+        android:layout_width="253dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:text="Capacitors"
+        android:textColor="?attr/textcolor"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/returntoMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="?attr/buttoncolor"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/capTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
