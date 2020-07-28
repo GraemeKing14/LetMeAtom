@@ -7,19 +7,6 @@
     android:background="?attr/backgroundcolor"
     tools:context=".OurDynamicUniverse.oduHome">
 
-    <TextView
-        android:id="@+id/oudHeading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:gravity="center_horizontal"
-        android:text="Our Dynamic Universe"
-        android:textColor="?attr/textcolor"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/motionButton"
         android:layout_width="130dp"
@@ -37,14 +24,14 @@
         android:id="@+id/forcesButton"
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
         android:background="?attr/buttoncolor"
         android:text="Forces, Energy &amp; Power"
         android:textColor="?attr/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oudHeading" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/colButton"
@@ -64,7 +51,7 @@
         android:id="@+id/gravButton"
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:background="?attr/buttoncolor"
         android:text="Gravitation"
         android:textColor="?attr/textcolor"
@@ -92,7 +79,7 @@
         android:id="@+id/uniButton"
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="56dp"
         android:layout_marginRight="56dp"
         android:background="?attr/buttoncolor"
@@ -105,10 +92,10 @@
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textColor="?attr/textcolor"
+        android:layout_marginTop="32dp"
         android:background="?attr/buttoncolor"
         android:text="return"
+        android:textColor="?attr/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relButton" />
