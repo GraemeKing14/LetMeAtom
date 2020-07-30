@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Electricity.SemiConductors"></activity>
+        <activity android:name=".Examination.HardQuiz"></activity>
+        <activity android:name=".Electricity.SemiConductors" />
         <activity android:name=".Electricity.Capacitors" />
         <activity android:name=".Electricity.ElecSources" />
         <activity android:name=".Electricity.Current" />
