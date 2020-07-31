@@ -2,7 +2,6 @@ package com.example.layout_idea.Examination;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -12,11 +11,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.layout_idea.DatabaseHelper;
 import com.example.layout_idea.Questions;
 import com.example.layout_idea.QuizDatabaseHelper;
 import com.example.layout_idea.R;
@@ -25,7 +22,8 @@ import com.example.layout_idea.SharedPrefs;
 import java.util.Collections;
 import java.util.List;
 
-public class HardQuiz extends AppCompatActivity {
+public class EasyQuiz extends AppCompatActivity {
+
 
     SharedPrefs sharedPref;
     private QuizDatabaseHelper dbQuestions;
@@ -50,7 +48,6 @@ public class HardQuiz extends AppCompatActivity {
     private int score;
     private boolean answered;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         sharedPref = new SharedPrefs(this);
@@ -61,25 +58,9 @@ public class HardQuiz extends AppCompatActivity {
             setTheme(R.style.AppTheme);
         }
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hard_quiz);
+        setContentView(R.layout.activity_easy_quiz);
         setUpUi();
         showNextQuestion();
-
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!answered) {
-                    if (answerA.isChecked() || answerB.isChecked() || answerC.isChecked() || answerD.isChecked()) {
-                        checkAnswer();
-                    } else {
-                        Toast.makeText(HardQuiz.this, "Please select an answer", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    showNextQuestion();
-                }
-            }
-        });
-
     }
 
     public void setUpUi() {
@@ -97,14 +78,29 @@ public class HardQuiz extends AppCompatActivity {
         defaultButton = answerA.getTextColors();
 
         dbQuestions = new QuizDatabaseHelper(this);
-        questionsList = dbQuestions.getAllQuestionsHard();
+        questionsList = dbQuestions.getAllQuestionsEasy();
         questionCountTotal = questionsList.size();
         Collections.shuffle(questionsList);
 
         exitQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HardQuiz.this, examDifficulty.class));
+                startActivity(new Intent(EasyQuiz.this, examDifficulty.class));
+            }
+        });
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!answered) {
+                    if (answerA.isChecked() || answerB.isChecked() || answerC.isChecked() || answerD.isChecked()) {
+                        checkAnswer();
+                    } else {
+                        Toast.makeText(EasyQuiz.this, "Please select an answer", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    showNextQuestion();
+                }
             }
         });
     }

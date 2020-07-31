@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/backgroundcolor"
-    tools:context=".Examination.HardQuiz">
+    tools:context=".Examination.EasyQuiz">
 
     <TextView
         android:id="@+id/questionNumber"
@@ -111,4 +111,5 @@
             android:textSize="16dp" />
 
     </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

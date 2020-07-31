@@ -36,11 +36,27 @@ public class examDifficulty extends AppCompatActivity {
         medium = findViewById(R.id.mediumButton);
         hard = findViewById(R.id.hardButton);
 
+        easy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(examDifficulty.this, EasyQuiz.class));
+            }
+        });
+
+        medium.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(examDifficulty.this, MediumQuiz.class));
+            }
+        });
+
         hard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(examDifficulty.this, HardQuiz.class));
             }
         });
+
+
     }
 }
