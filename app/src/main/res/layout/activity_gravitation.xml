@@ -110,11 +110,13 @@
         android:id="@+id/keyEqs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:text="Key Equations:"
         android:textColor="?attr/textcolor"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/gravTitle"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gravTitle" />
 
     <TextView
@@ -143,8 +145,8 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="257dp"
-        android:layout_height="299dp"
+        android:layout_width="344dp"
+        android:layout_height="309dp"
         android:text="\nSatellites are in free fall around a planet or a star.\n\nThe horizontal motion and vertical motion of a projectile object are independent of each other. \n\nExperiment: Time an object of known length falling through two light gates. Must know the length of the object, the time to cut both gates, and the time between the two gates. \n\nMore can be found at: \nhttps://www.bbc.co.uk/bitesize/guides/z8k887h/revision/7."
         android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toTopOf="@+id/toCollisons"

@@ -123,37 +123,34 @@
         android:id="@+id/eqOfMotionTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:gravity="center_horizontal"
         android:text="Equations Of Motion:"
         android:textColor="?attr/textcolor"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/motionTitle"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/motionTitle" />
 
     <TextView
         android:id="@+id/experiment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
         android:text="Experiment:"
         android:textColor="?attr/textcolor"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/whereMotion"
-        app:layout_constraintStart_toStartOf="@+id/eqOfMotionTitle" />
+        app:layout_constraintBottom_toTopOf="@+id/toCollisons"
+        app:layout_constraintStart_toStartOf="@+id/eqOfMotionTitle"
+        app:layout_constraintTop_toBottomOf="@+id/eqOfMotionTitle"
+        app:layout_constraintVertical_bias="0.627" />
 
     <TextView
         android:id="@+id/whereMotion"
-        android:layout_width="260dp"
-        android:layout_height="108dp"
-        android:layout_marginBottom="84dp"
+        android:layout_width="337dp"
+        android:layout_height="127dp"
         android:text="Set up two light gates a distance apart on a slope. Put a card of known length onto a trolley. Use a timer to measure. Measure the time for the card to cut both gates, as well as the time taken for the trolley to travel between the two gates."
         android:textColor="?attr/textcolor"
-        app:layout_constraintBottom_toTopOf="@+id/toGravitation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/experiment" />
+        app:layout_constraintStart_toStartOf="@+id/experiment"
+        app:layout_constraintTop_toBottomOf="@+id/experiment" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

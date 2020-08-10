@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
+
+import org.w3c.dom.Text;
 
 public class ExpandingUniverse extends AppCompatActivity {
 
@@ -20,6 +24,7 @@ public class ExpandingUniverse extends AppCompatActivity {
     private Button gravitation;
     private Button relativity;
     private Button motion;
+    private TextView uniEqs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,11 @@ public class ExpandingUniverse extends AppCompatActivity {
         collisions = findViewById(R.id.toCollisons);
         gravitation = findViewById(R.id.toGravitation);
         relativity = findViewById(R.id.toRelativity);
+        uniEqs = findViewById(R.id.expandingEqs);
+
+        uniEqs.setText(Html.fromHtml("f<sub>o</sub> = f<sub>s</sub>(<sup>v</sup>/<sub>v &#177; v<sub>s</sub></sub>) " +
+                "<br><br>z = ( &lambda<sub>observed</sub> - &lambda<sub>rest</sub> ) / &lambda<sub>rest</sub> <br><br>z = <sup>v</sup>/<sub>c</sub> <br><br>" +
+                "v = H<sub>o</sub>d"));
 
         backToMenu.setOnClickListener(new View.OnClickListener() {
             @Override

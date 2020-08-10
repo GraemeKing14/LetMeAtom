@@ -110,11 +110,13 @@
         android:id="@+id/keyEqs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:text="Key Equations:"
         android:textColor="?attr/textcolor"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/collisionsTitle"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/collisionsTitle" />
 
     <TextView
@@ -143,7 +145,7 @@
 
     <TextView
         android:id="@+id/keyDefsText"
-        android:layout_width="252dp"
+        android:layout_width="343dp"
         android:layout_height="266dp"
         android:text="\nElastic Collision: No loss of Kinetic Energy. \n\nInelastic Collision: Some portion of the kinetic energy is transferred to another type of energy. \n\nExplosion: Kinetic energy increases. \n\nImpulse: Area under a force-time graph. It is also equal to the change in momentum of an object involved in an interaction. "
         android:textColor="?attr/textcolor"

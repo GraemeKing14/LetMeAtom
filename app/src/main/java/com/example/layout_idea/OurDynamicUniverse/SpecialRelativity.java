@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
@@ -20,6 +22,7 @@ public class SpecialRelativity extends AppCompatActivity {
     private Button gravitation;
     private Button motion;
     private Button universe;
+    private TextView equationsRel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,9 @@ public class SpecialRelativity extends AppCompatActivity {
         collisions = findViewById(R.id.toCollisons);
         gravitation = findViewById(R.id.toGravitation);
         universe = findViewById(R.id.toUniverse);
+        equationsRel = findViewById(R.id.relEquations);
+
+        equationsRel.setText(Html.fromHtml("<br>t' = t / &#8730(1-(<sup>v</sup>/<sub>c</sub>)<sup>2</sup> <br><br>l' = l / &#8730(1-(<sup>v</sup>/<sub>c</sub>)<sup>2</sup>"));
 
         backToMenu.setOnClickListener(new View.OnClickListener() {
             @Override
