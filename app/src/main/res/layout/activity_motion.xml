@@ -114,6 +114,7 @@
         android:textColor="?attr/textcolor"
         android:textSize="12sp"
         android:textStyle="italic"
+        android:gravity="center_horizontal"
         app:layout_constraintBottom_toTopOf="@+id/experiment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +127,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:gravity="center_horizontal"
-        android:text="Equations Of Motion:"
+        android:text="Key Equations:"
         android:textColor="?attr/textcolor"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,7 +143,7 @@
         app:layout_constraintBottom_toTopOf="@+id/toCollisons"
         app:layout_constraintStart_toStartOf="@+id/eqOfMotionTitle"
         app:layout_constraintTop_toBottomOf="@+id/eqOfMotionTitle"
-        app:layout_constraintVertical_bias="0.627" />
+        app:layout_constraintVertical_bias="0.593" />
 
     <TextView
         android:id="@+id/whereMotion"

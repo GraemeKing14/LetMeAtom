@@ -123,8 +123,10 @@
         android:id="@+id/expandingEqs"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:gravity="center_horizontal"
         android:textColor="?attr/textcolor"
         android:textSize="12sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/uniKeyDefsTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,7 +142,7 @@
         app:layout_constraintBottom_toTopOf="@+id/toForces"
         app:layout_constraintStart_toStartOf="@+id/keyEqs"
         app:layout_constraintTop_toBottomOf="@+id/keyEqs"
-        app:layout_constraintVertical_bias="0.296" />
+        app:layout_constraintVertical_bias="0.365" />
 
     <TextView
         android:id="@+id/textView5"

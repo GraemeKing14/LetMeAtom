@@ -49,7 +49,7 @@ public class ExpandingUniverse extends AppCompatActivity {
         relativity = findViewById(R.id.toRelativity);
         uniEqs = findViewById(R.id.expandingEqs);
 
-        uniEqs.setText(Html.fromHtml("f<sub>o</sub> = f<sub>s</sub>(<sup>v</sup>/<sub>v &#177; v<sub>s</sub></sub>) " +
+        uniEqs.setText(Html.fromHtml("<br>f<sub>o</sub> = f<sub>s</sub>(<sup>v</sup>/<sub>v &#177; v<sub>s</sub></sub>) " +
                 "<br><br>z = ( &lambda<sub>observed</sub> - &lambda<sub>rest</sub> ) / &lambda<sub>rest</sub> <br><br>z = <sup>v</sup>/<sub>c</sub> <br><br>" +
                 "v = H<sub>o</sub>d"));
 
