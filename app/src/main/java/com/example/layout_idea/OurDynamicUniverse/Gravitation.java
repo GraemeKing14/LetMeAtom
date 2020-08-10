@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
@@ -20,6 +22,7 @@ public class Gravitation extends AppCompatActivity {
     private Button motion;
     private Button relativity;
     private Button universe;
+    private TextView keyEqs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,9 @@ public class Gravitation extends AppCompatActivity {
         collisions = findViewById(R.id.toCollisons);
         relativity = findViewById(R.id.toRelativity);
         universe = findViewById(R.id.toUniverse);
+        keyEqs = findViewById(R.id.keyEqsText);
+
+        keyEqs.setText(Html.fromHtml("<br><br>F = G (m<sub>1</sub>m<sub>2</sub> / r<sup>2</sup>)"));
 
         backToMenu.setOnClickListener(new View.OnClickListener() {
             @Override

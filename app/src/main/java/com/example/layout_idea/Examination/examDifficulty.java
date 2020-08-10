@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
+import com.example.layout_idea.HomePage;
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
 
@@ -16,6 +18,7 @@ public class examDifficulty extends AppCompatActivity {
     private Button easy;
     private Button medium;
     private Button hard;
+    private ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class examDifficulty extends AppCompatActivity {
         easy = findViewById(R.id.easyButton);
         medium = findViewById(R.id.mediumButton);
         hard = findViewById(R.id.hardButton);
+        backButton = findViewById(R.id.returntoMenu);
 
         easy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +58,13 @@ public class examDifficulty extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(examDifficulty.this, HardQuiz.class));
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(examDifficulty.this, HomePage.class));
             }
         });
 

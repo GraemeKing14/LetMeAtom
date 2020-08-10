@@ -106,4 +106,50 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/keyEqs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Key Equations:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/gravTitle"
+        app:layout_constraintTop_toBottomOf="@+id/gravTitle" />
+
+    <TextView
+        android:id="@+id/keyEqsText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="?attr/textcolor"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyEqs" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Key Definitions:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/keyEqs"
+        app:layout_constraintTop_toBottomOf="@+id/keyEqs"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="257dp"
+        android:layout_height="299dp"
+        android:text="\nSatellites are in free fall around a planet or a star.\n\nThe horizontal motion and vertical motion of a projectile object are independent of each other. \n\nExperiment: Time an object of known length falling through two light gates. Must know the length of the object, the time to cut both gates, and the time between the two gates. \n\nMore can be found at: \nhttps://www.bbc.co.uk/bitesize/guides/z8k887h/revision/7."
+        android:textColor="?attr/textcolor"
+        app:layout_constraintBottom_toTopOf="@+id/toCollisons"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -107,4 +107,54 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/keyEqs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Key Equations:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forcesTitle" />
+
+    <TextView
+        android:id="@+id/keyDefs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="220dp"
+        android:text="Key Definitions:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/toGravitation"
+        app:layout_constraintStart_toStartOf="@+id/defsDescription" />
+
+    <TextView
+        android:id="@+id/defsDescription"
+        android:layout_width="266dp"
+        android:layout_height="0dp"
+        android:text="N1: An object remains in a state of rest or uniform motion unless acted upon by another force.\n\nN2: An objects force is equal to the mass of an object multiplied by its acceleration. \n\nAn object reaches terminal velocity when all forces acting on that object are equal. \n\nIn any process, energy and momentum are always conserved."
+        android:textColor="?attr/textcolor"
+        app:layout_constraintBottom_toTopOf="@+id/toGravitation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyDefs"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/forcesEquationsText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:textColor="?attr/textcolor"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/keyDefs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyEqs"
+        app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

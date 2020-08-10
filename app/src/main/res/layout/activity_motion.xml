@@ -13,7 +13,7 @@
         android:layout_height="92dp"
         android:layout_marginTop="24dp"
         android:gravity="center_horizontal"
-        android:text="Motion: Equations and Graphs"
+        android:text="Motion: Equations"
         android:textColor="?attr/textcolor"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,15 +107,53 @@
         app:srcCompat="@android:drawable/ic_menu_revert" />
 
     <TextView
+        android:id="@+id/eqsOfMotionText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text=""
+        android:textColor="?attr/textcolor"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/experiment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eqOfMotionTitle" />
+
+    <TextView
         android:id="@+id/eqOfMotionTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Equations of Motion"
+        android:gravity="center_horizontal"
+        android:text="Equations Of Motion:"
         android:textColor="?attr/textcolor"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/motionTitle"
         app:layout_constraintTop_toBottomOf="@+id/motionTitle" />
+
+    <TextView
+        android:id="@+id/experiment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="Experiment:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/whereMotion"
+        app:layout_constraintStart_toStartOf="@+id/eqOfMotionTitle" />
+
+    <TextView
+        android:id="@+id/whereMotion"
+        android:layout_width="260dp"
+        android:layout_height="108dp"
+        android:layout_marginBottom="84dp"
+        android:text="Set up two light gates a distance apart on a slope. Put a card of known length onto a trolley. Use a timer to measure. Measure the time for the card to cut both gates, as well as the time taken for the trolley to travel between the two gates."
+        android:textColor="?attr/textcolor"
+        app:layout_constraintBottom_toTopOf="@+id/toGravitation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/experiment" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
@@ -20,6 +22,7 @@ public class Motion extends AppCompatActivity {
     private Button gravitation;
     private Button relativity;
     private Button universe;
+    private TextView eq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,11 @@ public class Motion extends AppCompatActivity {
         gravitation = findViewById(R.id.toGravitation);
         relativity = findViewById(R.id.toRelativity);
         universe = findViewById(R.id.toUniverse);
+        eq = findViewById(R.id.eqsOfMotionText);
+
+        eq.setText(Html.fromHtml("<br><br>s = vt <br><br><br>v = u + at <br><br>" +
+                "s = ut + <sup>1</sup>/<sub>2</sub> at<sup>2<sup> <br><br> v<sup>2</sup> = u<sup>2</sup> + 2as <br><br>" +
+                "s = <sup>1</sup>/<sub>2</sub> (u + v)t "));
 
         backToMenu.setOnClickListener(new View.OnClickListener() {
             @Override

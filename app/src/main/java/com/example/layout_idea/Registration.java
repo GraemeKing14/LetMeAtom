@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class Registration extends AppCompatActivity {
 
-    private EditText username, password;
+    private EditText username, password, confirmPassword;
     private Button register;
     private DatabaseHelper db;
     SharedPrefs sharedPref;
@@ -34,11 +34,15 @@ public class Registration extends AppCompatActivity {
             public void onClick(View v) {
                 String user = username.getText().toString().trim();
                 String pwd = password.getText().toString().trim();
+                String cnfpwd = confirmPassword.getText().toString().trim();
                 long val = db.addUser(user, pwd);
-                if (val > 0 && !user.isEmpty() && !pwd.isEmpty()) {
+                if (val > 0 && !user.isEmpty() && !pwd.isEmpty() && cnfpwd.equals(pwd)) {
                     startActivity(new Intent(Registration.this, MainActivity.class));
-                    Toast.makeText(Registration.this, "You have registered", Toast.LENGTH_SHORT).show();
-                } else {
+                    Toast.makeText(Registration.this, "You have registered", Toast.LENGTH_SHORT).show(); }
+                else if (!cnfpwd.equals(pwd)) {
+                    Toast.makeText(Registration.this, "Passwords don't match!", Toast.LENGTH_SHORT).show();
+                    }
+                else {
                     Toast.makeText(Registration.this, "Registration Error!", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -48,6 +52,7 @@ public class Registration extends AppCompatActivity {
         username = findViewById(R.id.enterNameReg);
         password = findViewById(R.id.passwordReg);
         register = findViewById(R.id.register);
+        confirmPassword = findViewById(R.id.confirmPasswordReg);
         db = new DatabaseHelper(this);
     }
 

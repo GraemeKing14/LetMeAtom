@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
@@ -20,6 +22,7 @@ public class ForcesEnergyPower extends AppCompatActivity {
     private Button gravitation;
     private Button relativity;
     private Button universe;
+    private TextView equations;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,10 @@ public class ForcesEnergyPower extends AppCompatActivity {
         gravitation = findViewById(R.id.toGravitation);
         relativity = findViewById(R.id.toRelativity);
         universe = findViewById(R.id.toUniverse);
+        equations = findViewById(R.id.forcesEquationsText);
+
+        equations.setText(Html.fromHtml("<br>F = ma <br><br>W = mg <br><br> E<sub>w</sub> = Fd or W = Fd <br><br>E<sub>p</sub> = mgh <br><br>" +
+                "E<sub>k</sub> = <sup>1</sup>/<sub>2</sub> mv<sup>2</sup> <br><br>P = <sup>E</sup>/<sub>t</sub>"));
 
         backToMenu.setOnClickListener(new View.OnClickListener() {
             @Override

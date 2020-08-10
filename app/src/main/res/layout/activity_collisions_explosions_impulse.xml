@@ -106,5 +106,51 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/keyEqs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Key Equations:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/collisionsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/collisionsTitle" />
+
+    <TextView
+        android:id="@+id/equationsCol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textStyle="italic"
+        android:text="\n\n p = mv \n\n Ft = mv - mu"
+        android:textColor="?attr/textcolor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyEqs" />
+
+    <TextView
+        android:id="@+id/keyDefs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Key Definitions:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/keyEqs"
+        app:layout_constraintTop_toBottomOf="@+id/equationsCol" />
+
+    <TextView
+        android:id="@+id/keyDefsText"
+        android:layout_width="252dp"
+        android:layout_height="266dp"
+        android:text="\nElastic Collision: No loss of Kinetic Energy. \n\nInelastic Collision: Some portion of the kinetic energy is transferred to another type of energy. \n\nExplosion: Kinetic energy increases. \n\nImpulse: Area under a force-time graph. It is also equal to the change in momentum of an object involved in an interaction. "
+        android:textColor="?attr/textcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/keyDefs"
+        app:layout_constraintTop_toBottomOf="@+id/keyDefs" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
