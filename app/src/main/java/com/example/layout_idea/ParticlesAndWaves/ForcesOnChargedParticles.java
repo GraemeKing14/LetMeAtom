@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
@@ -22,6 +24,7 @@ public class ForcesOnChargedParticles extends AppCompatActivity {
     private Button toInt;
     private Button toSpec;
     private Button toRef;
+    private TextView fEqs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,9 @@ public class ForcesOnChargedParticles extends AppCompatActivity {
         toInt = findViewById(R.id.toInt);
         toSpec = findViewById(R.id.toSpec);
         toRef = findViewById(R.id.toRef);
+        fEqs = findViewById(R.id.fcpEquations);
+
+        fEqs.setText(Html.fromHtml("<br><br>W = QV <br><br>E<sub>k</sub> = <sup>1</sup>/<sub>2</sub> mv<sup>2</sup>"));
 
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override

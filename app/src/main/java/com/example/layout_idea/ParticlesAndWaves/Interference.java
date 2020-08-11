@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
@@ -22,6 +25,7 @@ public class Interference extends AppCompatActivity {
     private Button toFC;
     private Button toSpec;
     private Button toRef;
+    private TextView keyEq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,10 @@ public class Interference extends AppCompatActivity {
         toWPD = findViewById(R.id.toWPD);
         toSpec = findViewById(R.id.toSpec);
         toRef = findViewById(R.id.toRef);
+        keyEq = findViewById(R.id.equationsInt);
+
+        keyEq.setText(Html.fromHtml("<br>d sin&theta = m&lambda <br><br>path difference = m&lambda or (m + <sup>1</sup>/<sub>2</sub>) &lambda where " +
+                "m = 0,1,2,..."));
 
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override

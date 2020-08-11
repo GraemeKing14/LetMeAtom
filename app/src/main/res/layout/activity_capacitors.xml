@@ -84,5 +84,52 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/keyEqs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Key Equations:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/capTitle" />
+
+    <TextView
+        android:id="@+id/equationsCap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textStyle="italic"
+        android:textColor="?attr/textcolor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyEqs" />
+
+    <TextView
+        android:id="@+id/keyDefs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Key Definitions:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/keyEqs"
+        app:layout_constraintTop_toBottomOf="@+id/equationsCap" />
+
+    <TextView
+        android:id="@+id/keyDefsText"
+        android:layout_width="343dp"
+        android:layout_height="266dp"
+        android:text="\nA capacitor of 1 farad will store 1 coulomb of charge when the potential difference across it is 1 volt. \n\nThe total energy stored in a charged capacitor is equal to the area under a charge-potential difference graph. \n\n"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/keyDefs"
+        app:layout_constraintTop_toBottomOf="@+id/keyDefs" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

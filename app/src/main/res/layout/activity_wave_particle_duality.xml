@@ -120,4 +120,53 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/keyEqs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Key Equations:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wpdTitle" />
+
+    <TextView
+        android:id="@+id/equationsWPD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textStyle="italic"
+        android:textColor="?attr/textcolor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyEqs" />
+
+    <TextView
+        android:id="@+id/keyDefs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Key Definitions:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/keyEqs"
+        app:layout_constraintTop_toBottomOf="@+id/equationsWPD" />
+
+    <TextView
+        android:id="@+id/keyDefsText"
+        android:layout_width="343dp"
+        android:layout_height="266dp"
+        android:text="\nThe photoelectric effect is evidence for the particle model of light. \n\nPhotoemission: Photons of sufficient energy that eject electrons from the surface of materials. \n\nThreshold frequency is the minimum frequency required in order for photoemission to occur. \n\nWork function: The minimum energy of a photo required for photoemission. "
+        android:textColor="?attr/textcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/keyDefs"
+        app:layout_constraintTop_toBottomOf="@+id/keyDefs" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -74,10 +74,10 @@
         android:id="@+id/toWPD"
         android:layout_width="53dp"
         android:layout_height="55dp"
-        android:background="?attr/buttoncolor"
-        android:textColor="?attr/textcolor"
         android:layout_marginBottom="16dp"
+        android:background="?attr/buttoncolor"
         android:text="5"
+        android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -119,5 +119,27 @@
         android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/keyDefsSM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Key Definitions"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tsmTitle" />
+
+    <TextView
+        android:id="@+id/keyDefSM"
+        android:layout_width="327dp"
+        android:layout_height="473dp"
+        android:textColor="?attr/textcolor"
+        android:text="\nThe standard model describes the fundamental particles of the universe and how they interact. \n\nHigh energy collisions between electrons and nucleons in particle accelerators have presented evidence for the existence of quarks. \n\nEach particle has its own antiparticle. Furthermore, the production of energy in the annihilation of particles has given evidence for antimatter. \n\nHadrons are composite particles made of quarks. Baryons are made up of 3 quarks. Mesons are made up on quark anti-quark pairs. Fermions consists of quarks and leptons. \n\nQuark Types: Up, Down, Strange, Charm, Top, Bottom. \n\nLepton Types: electron, muon, tau, and their respective neutrinos. \n\nThe force mediating particles are Bosons. Photons (electromagnetic force), W- and Z- bosons (weak force), and gluons (strong force)."
+        app:layout_constraintStart_toStartOf="@+id/keyDefsSM"
+        app:layout_constraintTop_toBottomOf="@+id/keyDefsSM" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

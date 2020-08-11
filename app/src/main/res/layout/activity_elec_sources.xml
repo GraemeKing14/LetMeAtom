@@ -84,6 +84,54 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/keyEqs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Key Equations:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sourcesTitle" />
+
+    <TextView
+        android:id="@+id/equationsCol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="\nE = V + Ir \n\nV = IR"
+        android:textStyle="italic"
+        android:textColor="?attr/textcolor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyEqs" />
+
+    <TextView
+        android:id="@+id/keyDefs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Key Definitions:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/keyEqs"
+        app:layout_constraintTop_toBottomOf="@+id/equationsCol" />
+
+    <TextView
+        android:id="@+id/keyDefsText"
+        android:layout_width="342dp"
+        android:layout_height="389dp"
+        android:text="\nEMF: Electromotive Force \n\nEMF Experiment: Set Up a circuit of known resistance and voltage. Measure the current of the circuit as you reduce the resistance incrementally. Incrementally raise R back up to original value, measuring again to average I between the two values. Plot a graph of R against 1/I. The gradient of said graph is the emf of the cell. \n\nShort Circuit: A circuit which allows current to travel along with little impedence. \n\nOpen Circuit: A circuit which is not complete. \n\nIdeal Supply: An ideal supply is one in which voltage remains constant."
+        android:textColor="?attr/textcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/keyDefs"
+        app:layout_constraintTop_toBottomOf="@+id/keyDefs" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

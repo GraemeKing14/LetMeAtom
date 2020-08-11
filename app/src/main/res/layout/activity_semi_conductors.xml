@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/semiTitle"
-        android:layout_width="253dp"
-        android:layout_height="119dp"
+        android:layout_width="245dp"
+        android:layout_height="45dp"
         android:layout_marginTop="24dp"
         android:gravity="center_horizontal"
         android:text="Semi-Conductors"
@@ -83,5 +83,29 @@
         android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/keyDefs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Key Definitions:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/semiTitle" />
+
+    <TextView
+        android:id="@+id/equationsCol"
+        android:layout_width="335dp"
+        android:layout_height="563dp"
+        android:text="\nSolid can be categorised into conductors, semiconductors or insulators by their band structure and their ability to conduct electricity. \n\nEvery solid has its own characteristic energy band structure. For a solid to be conductive, both free electrons and accessible empty states must be available. \n\nThe electrons in atoms are contained in energy levels. When the atoms come together to form solids, the electrons then become contained in energy bands separated by gaps. \n\nFor metals we have the situation where one or more bands are partially filled. Some metals have free electrons and partially filled valence bands, therefore they are highly conductive.  Some metals have overlapping valence and conduction bands. Each band is partially filled and therefore they are conductive. \n\nIn an insulator, the highest occupied band (called the valence band) is full. The first unfilled band above the valence band is the conduction band. For an insulator, the gap between the valence band and the conduction band is large and at room temperature there is not enough energy available to move electrons from the valence band into the conduction band where they would be able to contribute to conduction. \n\nIn a semiconductor, the gap between the valence band and conduction band is smaller and at room temperature there is sufficient energy available to move some electrons from the valence band into the conduction band allowing some conduction to take place. An increase in temperature increases the conductivity of a semiconductor. \n\nSemiconductors may be doped with specific impurities to increase their conductivity, resulting in two types of semiconductor: p-type and n-type"
+        android:textColor="?attr/textcolor"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/keyDefs"
+        app:layout_constraintTop_toBottomOf="@+id/keyDefs" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
@@ -22,6 +24,7 @@ public class InverseSquareLaw extends AppCompatActivity {
     private Button toInt;
     private Button toSpec;
     private Button toRef;
+    private TextView keyEq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,11 @@ public class InverseSquareLaw extends AppCompatActivity {
         toInt = findViewById(R.id.toInt);
         toSpec = findViewById(R.id.toSpec);
         toRef = findViewById(R.id.toRef);
+        keyEq = findViewById(R.id.equationsInv);
+
+        keyEq.setText(Html.fromHtml("<br>I = <sup>P</sup>/<sub>A</sub> <br><br>I = <sup>k</sup>/<sub>d<sup>2</sup></sub> <br><br>" +
+                "I<sub>1</sub>d<sub>1</sub><sup>2</sup> = I<sub>2</sub>d<sub>2</sub><sup>2</sup> <br><br><br>" +
+                "Where I is irradiance, P is power, d1 and d2 are distances from a point source of light, k is coulombs law constant and A is area."));
 
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override

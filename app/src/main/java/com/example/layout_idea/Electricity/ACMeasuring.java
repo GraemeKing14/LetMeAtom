@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
+
+import org.w3c.dom.Text;
 
 public class ACMeasuring extends AppCompatActivity {
 
@@ -19,6 +23,7 @@ public class ACMeasuring extends AppCompatActivity {
     private Button toSemi;
     private Button toSources;
     private ImageButton goBack;
+    private TextView keyEq;
 
 
     @Override
@@ -41,6 +46,11 @@ public class ACMeasuring extends AppCompatActivity {
         toSemi = findViewById(R.id.toSemi);
         toSources = findViewById(R.id.toSource);
         goBack = findViewById(R.id.returntoMenu);
+        keyEq = findViewById(R.id.equationsAC);
+
+        keyEq.setText(Html.fromHtml("<br>V<sub>rms</sub> = <sup>V<sub>peak</sub></sup> / <sub>&#8730;2</sub>" +
+                "<br><br><br>I<sub>rms</sub> = <sup>I<sub>peak</sub></sup> / <sub>&#8730;2</sub> <br><br>" +
+                "T = <sup>1</sup>/<sub>f</sub>"));
 
         toCurrent.setOnClickListener(new View.OnClickListener() {
             @Override

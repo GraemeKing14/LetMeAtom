@@ -120,4 +120,51 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+
+    <TextView
+        android:id="@+id/keyEqs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Key Equations:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fcpTitle" />
+
+    <TextView
+        android:id="@+id/fcpEquations"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="?attr/textcolor"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/keyDefsFCP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyEqs" />
+
+    <TextView
+        android:id="@+id/keyDefsFCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Key Definitions:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/toNR"
+        app:layout_constraintStart_toStartOf="@+id/keyEqs"
+        app:layout_constraintTop_toBottomOf="@+id/keyEqs"
+        app:layout_constraintVertical_bias="0.273" />
+
+    <TextView
+        android:id="@+id/defsFCP"
+        android:layout_width="327dp"
+        android:layout_height="202dp"
+        android:textColor="?attr/textcolor"
+        android:text="\nCharged particles experience a force in the electric field. These electric fields exist around charged particles and between two charged parallel plates. \n\nA moving charge produces an electric field. \n\nParticle Accelerators: The acceleration of charged particles using electric fields, which are deflected by magnetic fields, resulting in high-energy collisions of these charged particles in order to produce other particles.   "
+        app:layout_constraintStart_toStartOf="@+id/keyDefsFCP"
+        app:layout_constraintTop_toBottomOf="@+id/keyDefsFCP" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

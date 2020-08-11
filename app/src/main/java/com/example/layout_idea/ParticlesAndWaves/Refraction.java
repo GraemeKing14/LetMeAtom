@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
@@ -22,6 +24,7 @@ public class Refraction extends AppCompatActivity {
     private Button toInt;
     private Button toSpec;
     private Button toFC;
+    private TextView keyEq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,12 @@ public class Refraction extends AppCompatActivity {
         toWPD = findViewById(R.id.toWPD);
         toInt = findViewById(R.id.toInt);
         toSpec = findViewById(R.id.toSpec);
+        keyEq = findViewById(R.id.equationsRef);
+
+        keyEq.setText(Html.fromHtml("<br> n = <sup>sin&theta<sub>1</sub></sup>/<sub>sin&theta<sub>2</sub></sub> <br><br>" +
+                "<sup>sin&theta<sub>1</sub></sup>/<sub>sin&theta<sub>2</sub></sub> =  <sup>&lambda<sub>1</sub></sup>/<sub>&lambda<sub>2</sub></sub> =  " +
+                "<sup>v<sub>1</sub></sup>/<sub>v<sub>2</sub></sub> <br><br>v = f&lambda <br><br> sin&theta<sub>c</sub> = " +
+                "<sup>1</sup>/<sub>n</sub>"));
 
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -119,5 +119,32 @@
         android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+        android:id="@+id/keyEqs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Key Equations:"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/specTitle" />
+
+    <TextView
+        android:id="@+id/keyDefs"
+        android:layout_width="329dp"
+        android:layout_height="263dp"
+
+        android:text="\nAbsorption Lines (Fraunhofer lines) in the spectrum of sunlight lead to the understanding of the composition of the sun’s surface. \n\n More information regarding the Bohr Model of the atom can be found at: \n\nhttps://www.britannica.com/science/Bohr-model"
+        android:textColor="?attr/textcolor"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/keyEqs"
+        app:layout_constraintTop_toBottomOf="@+id/keyEqs" />
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

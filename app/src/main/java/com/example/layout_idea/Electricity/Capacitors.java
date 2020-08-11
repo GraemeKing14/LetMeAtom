@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
@@ -19,6 +21,7 @@ public class Capacitors extends AppCompatActivity {
     private Button toSemi;
     private Button toSources;
     private ImageButton goBack;
+    private TextView keyEq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,11 @@ public class Capacitors extends AppCompatActivity {
         toSemi = findViewById(R.id.toSemi);
         toSources = findViewById(R.id.toSource);
         goBack = findViewById(R.id.returntoMenu);
+        keyEq = findViewById(R.id.equationsCap);
+
+        keyEq.setText(Html.fromHtml("<br>C = <sup>Q</sup>/<sub>V</sub> <br><br>" +
+                "Q = It <br><br>" +
+                "E = <sup>1</sup>/<sub>2</sub>QV = <sup>1</sup>/<sub>2</sub>CV<sup>2</sup> = <sup>1</sup>/<sub>2</sub><sup>Q<sup>2</sup></sup>/<sub>C<sub>"));
 
         toAC.setOnClickListener(new View.OnClickListener() {
             @Override

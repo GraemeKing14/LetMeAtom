@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.layout_idea.R;
 import com.example.layout_idea.SharedPrefs;
@@ -22,6 +24,7 @@ public class WaveParticleDuality extends AppCompatActivity {
     private Button toInt;
     private Button toSpec;
     private Button toRef;
+    private TextView keyEq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,9 @@ public class WaveParticleDuality extends AppCompatActivity {
         toInt = findViewById(R.id.toInt);
         toSpec = findViewById(R.id.toSpec);
         toRef = findViewById(R.id.toRef);
+        keyEq = findViewById(R.id.equationsWPD);
+
+        keyEq.setText(Html.fromHtml("<br>E = hf <br><br>E<sub>k</sub> = hf - hf<sub>0</sub> <br><br> v = f&lambda"));
 
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
