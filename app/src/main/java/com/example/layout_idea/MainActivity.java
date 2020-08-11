@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     private Button LogIn;
     private TextView newUser;
     private DatabaseHelper db;
-    private String user;
     SharedPrefs sharedPref;
     private Switch dmSwitch;
 
