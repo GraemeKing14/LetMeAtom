@@ -11,7 +11,7 @@
         android:id="@+id/returntoMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="48dp"
         android:background="?attr/buttoncolor"
         android:textColor="?attr/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +23,7 @@
         android:id="@+id/easyButton"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="180dp"
         android:background="?attr/buttoncolor"
         android:text="Easy"
         android:textColor="?attr/textcolor"
@@ -48,7 +48,7 @@
         android:id="@+id/hardButton"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="220dp"
         android:background="?attr/buttoncolor"
         android:text="Hard"
         android:textColor="?attr/textcolor"
@@ -56,4 +56,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/easyHS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Highscore: 0"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/easyButton" />
+
+    <TextView
+        android:id="@+id/medHS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Highscore: 0"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mediumButton" />
+
+    <TextView
+        android:id="@+id/hardHS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Highscore: 0"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hardButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -48,6 +48,8 @@ public class EasyQuiz extends AppCompatActivity {
     private int score;
     private boolean answered;
 
+    public static final String easy_Score = "easyScore";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         sharedPref = new SharedPrefs(this);
@@ -176,6 +178,9 @@ public class EasyQuiz extends AppCompatActivity {
     }
 
     private void finishQuiz() {
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra(easy_Score, score);
+        setResult(RESULT_OK, resultIntent);
         finish();
     }
 }

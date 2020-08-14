@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseHelper db;
     SharedPrefs sharedPref;
     private Switch dmSwitch;
+    private String user;
+    private String pwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +48,13 @@ public class MainActivity extends AppCompatActivity {
         LogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String user = username.getText().toString();
-                String pwd = password.getText().toString();
+                user = username.getText().toString();
+                pwd = password.getText().toString();
                 Boolean res = db.checkUser(user, pwd);
                 if (res) {
                     startActivity(new Intent(MainActivity.this, HomePage.class));
                     Toast.makeText(MainActivity.this, "Welcome " + user, Toast.LENGTH_SHORT).show();
+
                 } else {
                     Toast.makeText(MainActivity.this, "Incorrect Username or Password", Toast.LENGTH_SHORT).show();
                 }
@@ -88,4 +91,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
         finish();
     }
+
 }

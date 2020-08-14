@@ -48,6 +48,8 @@ public class MediumQuiz extends AppCompatActivity {
     private int score;
     private boolean answered;
 
+    public static final String medium_Score = "mediumScore";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         sharedPref = new SharedPrefs(this);
@@ -176,6 +178,9 @@ public class MediumQuiz extends AppCompatActivity {
     }
 
     private void finishQuiz() {
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra(medium_Score, score);
+        setResult(RESULT_OK, resultIntent);
         finish();
     }
 }

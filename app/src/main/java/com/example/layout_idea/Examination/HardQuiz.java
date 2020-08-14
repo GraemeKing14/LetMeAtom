@@ -50,6 +50,8 @@ public class HardQuiz extends AppCompatActivity {
     private int score;
     private boolean answered;
 
+    public static final String hard_Score = "hardScore";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -180,6 +182,9 @@ public class HardQuiz extends AppCompatActivity {
     }
 
     private void finishQuiz() {
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra(hard_Score, score);
+        setResult(RESULT_OK, resultIntent);
         finish();
     }
 }
