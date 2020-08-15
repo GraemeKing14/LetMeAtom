@@ -85,7 +85,7 @@ public class HardQuiz extends AppCompatActivity {
     }
 
     public void setUpUi() {
-        // A method to set up the user interface.
+        /** A method to set up the user interface. **/
         question = findViewById(R.id.questionContent);
         questionScore = findViewById(R.id.questionScore);
         exitQuiz = findViewById(R.id.returntoMenu);
@@ -113,7 +113,7 @@ public class HardQuiz extends AppCompatActivity {
     }
 
     public void showNextQuestion() {
-        // A method to show the next question to the user.
+        /** A method to show the next question to the user. **/
         answerA.setTextColor(defaultButton);
         answerB.setTextColor(defaultButton);
         answerC.setTextColor(defaultButton);
@@ -139,7 +139,7 @@ public class HardQuiz extends AppCompatActivity {
     }
 
     public void checkAnswer() {
-        // A method which checks if the user entered response is correct or not.
+        /** A method which checks if the user entered response is correct or not. **/
         answered = true;
 
         RadioButton rbSelected = findViewById(rg.getCheckedRadioButtonId());
@@ -153,7 +153,7 @@ public class HardQuiz extends AppCompatActivity {
     }
 
     public void showSolution() {
-        // A method which highlights the right and wrong answers to the user.
+        /** A method which highlights the right and wrong answers to the user. **/
         answerA.setTextColor(Color.RED);
         answerB.setTextColor(Color.RED);
         answerC.setTextColor(Color.RED);
@@ -186,7 +186,7 @@ public class HardQuiz extends AppCompatActivity {
     }
 
     public void finishQuiz() {
-        // A method which finishes the quiz and relays information to the examDifficulty class.
+        /** A method which finishes the quiz and relays information to the examDifficulty class. **/
         Intent resultIntent = new Intent();
         resultIntent.putExtra(hard_Score, score);
         setResult(RESULT_OK, resultIntent);

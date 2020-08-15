@@ -65,7 +65,7 @@ public class examDifficulty extends AppCompatActivity {
     }
 
     public void setUpUi() {
-        // A method to set up the User Interface.
+        /** A method to set up the User Interface. **/
         backButton = findViewById(R.id.returntoMenu);
         easyScore = findViewById(R.id.easyHS);
         medScore = findViewById(R.id.medHS);
@@ -80,7 +80,7 @@ public class examDifficulty extends AppCompatActivity {
 
 
     public void startHardQuiz() {
-        // A method to add functionality to the hard button.
+        /** A method to add functionality to the hard button. **/
         hard = findViewById(R.id.hardButton);
         hard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,14 +91,14 @@ public class examDifficulty extends AppCompatActivity {
     }
 
     public void loadHardHighScore() {
-        // A method which loads the users high score for the hard quiz.
+        /** A method which loads the users high score for the hard quiz. **/
         SharedPreferences prefs = getSharedPreferences(shared_Prefs, MODE_PRIVATE);
         hardHighScore = prefs.getInt(hard_High_score, 0);
         hardScore.setText("Highscore: " + hardHighScore);
     }
 
     public void updateHighScoreHard(int newHardHighScore) {
-        // A method which updates the users high score the hard quiz.
+        /** A method which updates the users high score the hard quiz. **/
         hardHighScore = newHardHighScore;
         hardScore.setText("Highscore: " + hardHighScore);
 
@@ -111,7 +111,7 @@ public class examDifficulty extends AppCompatActivity {
 
 
     public void startMediumQuiz() {
-        // A method to add functionality to the medium button.
+        /** A method to add functionality to the medium button. **/
         medium = findViewById(R.id.mediumButton);
         medium.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,14 +123,14 @@ public class examDifficulty extends AppCompatActivity {
     }
 
     public void loadMediumHighScore() {
-        // A method which loads the users high score for the medium quiz.
+        /** A method which loads the users high score for the medium quiz. **/
         SharedPreferences prefs = getSharedPreferences(shared_Prefs, MODE_PRIVATE);
         medHighScore = prefs.getInt(med_High_score, 0);
         medScore.setText("Highscore: " + medHighScore);
     }
 
     public void updateHighScoreMed(int newMedHighScore) {
-        // A method which updates the users high score for the medium quiz.
+        /** A method which updates the users high score for the medium quiz. **/
         medHighScore = newMedHighScore;
         medScore.setText("Highscore: " + medHighScore);
 
@@ -143,7 +143,7 @@ public class examDifficulty extends AppCompatActivity {
 
 
     public void startEasyQuiz() {
-        // A method which adds functionality to the easy button.
+        /** A method which adds functionality to the easy button. **/
         easy = findViewById(R.id.easyButton);
         easy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,14 +154,14 @@ public class examDifficulty extends AppCompatActivity {
     }
 
     public void loadEasyHighScore() {
-        // A method which loads the users high score for the easy quiz.
+        /** A method which loads the users high score for the easy quiz. **/
         SharedPreferences prefs = getSharedPreferences(shared_Prefs, MODE_PRIVATE);
         easyHighScore = prefs.getInt(easy_High_score, 0);
         easyScore.setText("Highscore: " + easyHighScore);
     }
 
     public void updateHighScoreEasy(int newEasyHighScore) {
-        // A method which updates the users high score for the easy quiz.
+        /** A method which updates the users high score for the easy quiz. **/
         easyHighScore = newEasyHighScore;
         easyScore.setText("Highscore: " + easyHighScore);
 
@@ -174,8 +174,8 @@ public class examDifficulty extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // A method which retrieves the users resultant high scores from each quiz screen
-        // and updates them if the conditions are met.
+        /** A method which retrieves the users resultant high scores from each quiz screen
+        and updates them if the conditions are met. **/
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == Request_Code_Quiz_Easy) {
