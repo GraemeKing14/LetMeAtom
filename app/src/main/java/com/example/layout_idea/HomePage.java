@@ -41,6 +41,7 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void setUpUi() {
+        // A method to set up the UI and add onClickListener() functions.
         ODU = findViewById(R.id.odu);
         PAW = findViewById(R.id.paw);
         Elec = findViewById(R.id.elec);

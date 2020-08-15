@@ -66,6 +66,7 @@ public class EasyQuiz extends AppCompatActivity {
     }
 
     public void setUpUi() {
+        // A method to set up the user interface.
         question = findViewById(R.id.questionContent);
         questionScore = findViewById(R.id.questionScore);
         exitQuiz = findViewById(R.id.returntoMenu);
@@ -107,7 +108,9 @@ public class EasyQuiz extends AppCompatActivity {
         });
     }
 
-    private void showNextQuestion() {
+    public void showNextQuestion() {
+        // A method to show the next question of the quiz. Also finishes the quiz when questions
+        // are exhausted.
         answerA.setTextColor(defaultButton);
         answerB.setTextColor(defaultButton);
         answerC.setTextColor(defaultButton);
@@ -132,7 +135,8 @@ public class EasyQuiz extends AppCompatActivity {
         }
     }
 
-    private void checkAnswer() {
+    public void checkAnswer() {
+        // A method which checks if the user entered answered is correct.
         answered = true;
 
         RadioButton rbSelected = findViewById(rg.getCheckedRadioButtonId());
@@ -145,7 +149,8 @@ public class EasyQuiz extends AppCompatActivity {
         showSolution();
     }
 
-    private void showSolution() {
+    public void showSolution() {
+        // A method which highlights the right and wrong answers to the user for the quiz.
         answerA.setTextColor(Color.RED);
         answerB.setTextColor(Color.RED);
         answerC.setTextColor(Color.RED);
@@ -177,7 +182,8 @@ public class EasyQuiz extends AppCompatActivity {
         }
     }
 
-    private void finishQuiz() {
+    public void finishQuiz() {
+        // A method which finishes the quiz and relays information to the examDifficulty class.
         Intent resultIntent = new Intent();
         resultIntent.putExtra(easy_Score, score);
         setResult(RESULT_OK, resultIntent);

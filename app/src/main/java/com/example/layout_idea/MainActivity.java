@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setUpUi() {
+        // A method to set up the user interface and check for dark mode.
         username = findViewById(R.id.Username);
         password = findViewById(R.id.Password);
         LogIn = findViewById(R.id.LogIn);
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void restartApp() {
+        // A method to restart the application.
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
         finish();
     }
