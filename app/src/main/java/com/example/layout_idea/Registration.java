@@ -48,8 +48,8 @@ public class Registration extends AppCompatActivity {
             }
         });
     }
+    /** A Method to set up the user interface. **/
     public void setUpUi() {
-        /** A Method to set up the user interface. **/
         username = findViewById(R.id.enterNameReg);
         password = findViewById(R.id.passwordReg);
         register = findViewById(R.id.register);

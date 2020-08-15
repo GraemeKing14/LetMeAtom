@@ -10,23 +10,23 @@ import com.example.layout_idea.QuestionsContract.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/** A class used to create the Questions database. Inherits attributes
+ from the SQLiteOpenHelper class. **/
 public class QuizDatabaseHelper extends SQLiteOpenHelper {
-    /** A class used to create the Questions database. Inherits attributes
-    from the SQLiteOpenHelper class. **/
 
     private static final String Database_name = "Questions.db";
     private static final int Database_version = 1;
 
     private SQLiteDatabase db;
 
+    /** A simple constructor for the database. **/
     public QuizDatabaseHelper(Context context) {
-        /** A simple constructor for the database. **/
         super(context, Database_name, null, Database_version);
     }
 
+    /** A method which creates the database according to specifications. **/
     @Override
     public void onCreate(SQLiteDatabase db) {
-        /** A method which creates the database according to specifications. **/
         this.db = db;
 
         final String SQL_CREATE_QUESTIONS_TABLE = "CREATE TABLE " +
@@ -45,8 +45,8 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
         fillQuestionsTable();
     }
 
+    /** A method to which fills the database table with entries **/
     public void fillQuestionsTable() {
-        /** A method to which fills the database table with entries **/
 
         //Hard Questions
         Questions q1 = new Questions("The redshift of a distant galaxy is 0·014. According to Hubble’s law, the distance of the galaxy from Earth is? ", " 9·66 × 10e-12 m", " 9·32 × 10e27 m", "1·83 × 10e24 m", "1·30 × 10e26 m ", 3);
@@ -115,8 +115,8 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
         addQuestion(q30);
     }
 
+    /** A method to take values and insert them into the table. **/
     private void addQuestion(Questions question) {
-        /** A method to take values and insert them into the table. **/
         ContentValues cv = new ContentValues();
         cv.put(QuestionsTable.Column_Question, question.getQuestion());
         cv.put(QuestionsTable.Column_Option1, question.getOption1());
@@ -127,16 +127,15 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
         db.insert(QuestionsTable.Table_name, null, cv);
     }
 
+    /** A method to drop the table if the version is upgraded. **/
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        /** A method to drop the table if the version is upgraded. **/
         db.execSQL("DROP TABLE IF EXISTS " + QuestionsTable.Table_name);
         onCreate(db);
 
     }
-
+    /** A method to return all hard questions in the database. **/
     public List<Questions> getAllQuestionsHard() {
-        /** A method to return all hard questions in the database. **/
         List<Questions> questionList = new ArrayList<>();
         db = getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + QuestionsTable.Table_name + " WHERE _id BETWEEN 1 AND 10", null);
@@ -157,8 +156,8 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
         return questionList;
     }
 
+    /** A method to return all medium questions in the database. **/
     public List<Questions> getAllQuestionsMedium() {
-        /** A method to return all medium questions in the database. **/
         List<Questions> questionList = new ArrayList<>();
         db = getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + QuestionsTable.Table_name + " WHERE _id BETWEEN 11 AND 20", null);
@@ -179,8 +178,8 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
         return questionList;
     }
 
+    /** A method to return all easy questions from database. **/
     public List<Questions> getAllQuestionsEasy() {
-        /** A method to return all easy questions from database. **/
         List<Questions> questionList = new ArrayList<>();
         db = getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + QuestionsTable.Table_name + " WHERE _id BETWEEN 21 AND 30", null);

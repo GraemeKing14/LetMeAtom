@@ -40,8 +40,8 @@ public class HomePage extends AppCompatActivity {
 
     }
 
+    /** A Method to set up the user interface. **/
     public void setUpUi() {
-        /** A Method to set up the user interface. **/
         ODU = findViewById(R.id.odu);
         PAW = findViewById(R.id.paw);
         Elec = findViewById(R.id.elec);

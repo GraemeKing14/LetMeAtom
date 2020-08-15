@@ -80,8 +80,8 @@ public class MediumQuiz extends AppCompatActivity {
         });
     }
 
+    /** A method to set up the user interface. **/
     public void setUpUi() {
-        /** A method to set up the user interface. **/
         question = findViewById(R.id.questionContent);
         questionScore = findViewById(R.id.questionScore);
         exitQuiz = findViewById(R.id.returntoMenu);
@@ -108,8 +108,8 @@ public class MediumQuiz extends AppCompatActivity {
         });
     }
 
+    /** A method to show the user the next question. **/
     public void showNextQuestion() {
-        /** A method to show the user the next question. **/
         answerA.setTextColor(defaultButton);
         answerB.setTextColor(defaultButton);
         answerC.setTextColor(defaultButton);
@@ -134,8 +134,8 @@ public class MediumQuiz extends AppCompatActivity {
         }
     }
 
+    /** A method to check if the user entered response is correct or not. **/
     public void checkAnswer() {
-        /** A method to check if the user entered response is correct or not. **/
         answered = true;
 
         RadioButton rbSelected = findViewById(rg.getCheckedRadioButtonId());
@@ -148,8 +148,8 @@ public class MediumQuiz extends AppCompatActivity {
         showSolution();
     }
 
+    /** A method to highlight the right and wrong answers to the user for the medium quiz.**/
     public void showSolution() {
-        /** A method to highlight the right and wrong answers to the user for the medium quiz.**/
         answerA.setTextColor(Color.RED);
         answerB.setTextColor(Color.RED);
         answerC.setTextColor(Color.RED);
@@ -181,8 +181,8 @@ public class MediumQuiz extends AppCompatActivity {
         }
     }
 
+    /** A method to finish the quiz and relay information to the examDifficulty class. **/
     public void finishQuiz() {
-        /** A method to finish the quiz and relay information to the examDifficulty class. **/
         Intent resultIntent = new Intent();
         resultIntent.putExtra(medium_Score, score);
         setResult(RESULT_OK, resultIntent);

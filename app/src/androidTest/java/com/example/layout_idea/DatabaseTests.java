@@ -11,18 +11,17 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
+/** A testing class to error test both databases. Aims to check both databases
+ have been created correctly and can accept and return entries. **/
 @RunWith(AndroidJUnit4.class)
 public class DatabaseTests {
-
-    // A testing class to error test both databases. Aims to check both databases
-    // have been created correctly and can accept and return entries.
 
     private DatabaseHelper db;
     private QuizDatabaseHelper qDb;
 
+    /** Checks database names. Ensures the createDatabase function correctly. **/
     @Test
     public void checkDatabaseName() {
-        // Checks database names. Ensures the createDatabase function correctly.
         Context context = ApplicationProvider.getApplicationContext();
         db = new DatabaseHelper(context);
         qDb = new QuizDatabaseHelper(context);
@@ -30,10 +29,9 @@ public class DatabaseTests {
         assertEquals("Questions.db", qDb.getDatabaseName());
     }
 
-
+    /** Checks database versions. Ensures they have been created properly. **/
     @Test
     public void checkDatabaseVersion() {
-        // Checks database versions. Ensures they have been created properly.
         Context context = ApplicationProvider.getApplicationContext();
         db = new DatabaseHelper(context);
         qDb = new QuizDatabaseHelper(context);
@@ -41,9 +39,9 @@ public class DatabaseTests {
         assertEquals(qDb.getReadableDatabase().getVersion(), 1);
     }
 
+    /** Checks length of quiz database. Ensures that questions are added and retrieved correctly. **/
     @Test
     public void checkDatabaseLength() {
-        // Checks length of quiz database. Ensures that questions are added and retrieved correctly.
         Context context = ApplicationProvider.getApplicationContext();
         qDb = new QuizDatabaseHelper(context);
         assertEquals(qDb.getAllQuestionsHard().size(), 10);
@@ -52,14 +50,14 @@ public class DatabaseTests {
         assertNotEquals(qDb.getAllQuestionsEasy().size(), 11);
     }
 
+    /** Adds a user to the userInfo database and ensures that said user has been added to the db.
+     Also checks that the system returns false when a user is not registered to system.**/
     @Test
     public void testAddedUserExists() {
-        // Adds a user to the userInfo database and ensures that said user has been added to the db.
-        // Also checks that the system returns false when a user is not registered to system.
         Context context = ApplicationProvider.getApplicationContext();
         db = new DatabaseHelper(context);
-        db.addUser("Graeme", "12345");
-        assertEquals(db.checkUser("Graeme","12345"), true);
-        assertEquals(db.checkUser("Grame","12345"), false);
+        db.addUser("Kostas", "12345");
+        assertEquals(db.checkUser("Kostas","12345"), true);
+        assertEquals(db.checkUser("Kost","12345"), false);
     }
 }

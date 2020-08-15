@@ -11,17 +11,16 @@ import org.junit.runner.RunWith;
 
 
 import static org.junit.Assert.*;
-
+/** A testing class for checking that features that are reliant on shared preferences
+ work as expected. **/
 @RunWith(AndroidJUnit4.class)
 public class sharedPreferencesTesting {
-    // A testing class for checking that features that are reliant on shared preferences
-    // work as expected.
 
     private SharedPrefs sP;
 
+    /** A test to ensure that the dark mode toggle functions as expected. **/
     @Test
     public void checkDarkMode() {
-        // A test to ensure that the dark mode toggle functions as expected.
         Context context = ApplicationProvider.getApplicationContext();
         sP = new SharedPrefs(context);
         sP.setNightMode(true);

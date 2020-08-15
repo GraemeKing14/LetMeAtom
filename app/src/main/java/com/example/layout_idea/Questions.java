@@ -1,7 +1,7 @@
 package com.example.layout_idea;
 
+/** A class which allows the creation of a question object to be added to Questions database. **/
 public class Questions {
-    /** A class which allows the creation of a question object to be added to Questions database. **/
     private String question;
     private String option1;
     private String option2;
@@ -9,13 +9,12 @@ public class Questions {
     private String option4;
     private int answerNr;
 
+    /** A simple constructor. **/
     public Questions() {
-        /** A simple constructor. **/
-
     }
 
+    /** Constructor which accepts inputs. **/
     public Questions(String question, String option1, String option2, String option3, String option4, int answerNr) {
-        /** Constructor which accepts inputs. **/
         this.question = question;
         this.option1 = option1;
         this.option2 = option2;
@@ -24,63 +23,63 @@ public class Questions {
         this.answerNr = answerNr;
     }
 
+    /** Method to get the question content. **/
     public String getQuestion() {
-        /** Method to get the question content. **/
         return question;
     }
 
+    /** Method to set the question content. **/
     public void setQuestion(String question) {
-        /** Method to set the question content. **/
         this.question = question;
     }
 
+    /** Method to return the first option. **/
     public String getOption1() {
-        /** Method to return the first option. **/
         return option1;
     }
 
+    /** Method to set the first option. **/
     public void setOption1(String option1) {
-        /** Method to set the first option. **/
         this.option1 = option1;
     }
 
+    /** Method to return the second option. **/
     public String getOption2() {
-        /** Method to return the second option. **/
         return option2;
     }
 
+    /** Method to set the second option. **/
     public void setOption2(String option2) {
-        /** Method to set the second option. **/
         this.option2 = option2;
     }
 
+    /** Method to return the third option. **/
     public String getOption3() {
-        /** Method to return the third option. **/
         return option3;
     }
 
+    /** Method to set the third option. **/
     public void setOption3(String option3) {
-        /** Method to set the third option. **/
         this.option3 = option3;
     }
 
+    /** Method to get the fourth option. **/
     public String getOption4() {
-        /** Method to get the fourth option. **/
         return option4;
     }
 
+    /** Method to set the fourth option. **/
     public void setOption4(String option4) {
-        /** Method to set the fourth option. **/
         this.option4 = option4;
     }
 
+    /** Method to get the answer number. **/
     public int getAnswerNr() {
-        /** Method to get the answer number. **/
         return answerNr;
     }
 
+    /** Method to set the answer number. **/
     public void setAnswerNr(int answerNr) {
-        /** Method to set the answer number. **/
         this.answerNr = answerNr;
     }
 }

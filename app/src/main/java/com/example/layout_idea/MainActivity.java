@@ -76,8 +76,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /** A Method to set up the user interface. Also adds functionality to dark mode switch. **/
     public void setUpUi() {
-        /** A Method to set up the user interface. Also adds functionality to dark mode switch. **/
         username = findViewById(R.id.Username);
         password = findViewById(R.id.Password);
         LogIn = findViewById(R.id.LogIn);
@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /** A method to restart the application. **/
     public void restartApp() {
-        /** A method to restart the application. **/
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
         finish();
     }
